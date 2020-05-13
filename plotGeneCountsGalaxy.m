@@ -112,7 +112,7 @@ for dd=1:6
     ax1.YAxis.FontSize=12; %set y-axis fontsize.
     grid on;
     lim=ylim;
-    ylim([lim(1) lim(2)+2]);
+    ylim([-1 lim(2)+2]);
 
     %Plot normalised counts.
     yyaxis right
@@ -130,6 +130,8 @@ for dd=1:6
     plot(x4,dataMTN,'k.','MarkerEdgeColor',[.75 0 .75],'MarkerSize',20); %plot mutants.
     plot(x4,meanMTN,'kx','MarkerSize',12); %plot mean for mutants.
     ylabel('Normalised count','FontSize',12); %add y-axis label.
+    lim=ylim;
+    ylim([-1 lim(2)]);
     hold off;
 end
 
@@ -167,7 +169,7 @@ for dd=1:6
     ax1.YAxis.FontSize=12; %set y-axis fontsize.
     grid on;
     lim=ylim;
-    ylim([lim(1) lim(2)+2]);
+    ylim([-1 lim(2)+2]);
 
     %Plot normalised counts.
     yyaxis right
@@ -185,6 +187,8 @@ for dd=1:6
     plot(x4,dataMTN,'k.','MarkerEdgeColor',[0.75, 0, 0.75],'MarkerSize',20); %plot mutants.
     plot(x4,meanMTN,'kx','MarkerSize',12); %plot mean for mutants.
     ylabel('Normalised count','FontSize',12); %add y-axis label.
+    lim=ylim;
+    ylim([-1 lim(2)]);
     hold off;
 end
 
